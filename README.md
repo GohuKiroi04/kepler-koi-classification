@@ -109,8 +109,8 @@ kepler-koi-classification/
     ├── 03_feature_selection.ipynb
     ├── 04a_kbest_decision_tree.ipynb
     ├── 04b_kbest_knn.ipynb
-    ├── 04c_personal_knn.ipynb
-    ├── 04d_personal_random_forest.ipynb
+    ├── 04c_personnal_knn.ipynb
+    ├── 04d_personnal_random_forest.ipynb
     ├── 04e_variance_threshold_decision_tree.ipynb
     ├── 04f_variance_threshold_random_forest.ipynb
     └── 05_pipeline.ipynb
