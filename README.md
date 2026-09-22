@@ -21,14 +21,47 @@ A tabular observation describing:
 
 A prediction of the corresponding `koi_disposition` class.
 
-## Project Structure
+## Project tree structure
 
-1. Exploratory Data Analysis
-2. Data Preprocessing and Feature Engineering
-3. Feature Selection
-4. Model Training and Evaluation
-5. Machine Learning Pipeline
+kepler-koi-classification/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data/
+│    ├── raw/
+│    │   └── exoplanets_2018.csv
+│    │
+│    ├── processed/
+│    │   ├── xtrain.csv
+│    │   ├── xtest.csv
+│    │   ├── ytrain.csv
+│    │   └── ytest.csv
+│    │
+│    └── selected/
+│         ├── xtrain_KB.csv
+│         ├── xtest_KB.csv
+│         ├── xtrain_P.csv
+│         ├── xtest_P.csv
+│         ├── xtrain_VT.csv
+│         └── xtest_VT.csv
+│
+└── notebooks/
+    ├── 01_eda.ipynb
+    ├── 02_preprocessing.ipynb
+    ├── 03_feature_selection.ipynb
+    ├── 04a_kbest_decision_tree.ipynb
+    ├── 04b_kbest_knn.ipynb
+    ├── 04c_personal_knn.ipynb
+    ├── 04d_personal_random_forest.ipynb
+    ├── 04e_variance_threshold_decision_tree.ipynb
+    ├── 04f_variance_threshold_random_forest.ipynb
+    └── 05_pipeline.ipynb
 
+## Dependencies :
+    pip install -r requirements.txt
+    
 ## Results
 
 Models were evaluated using **F1-macro** as the main metric so that the three target classes contribute equally to the evaluation. Hyperparameters were selected with 5-fold stratified cross-validation.
